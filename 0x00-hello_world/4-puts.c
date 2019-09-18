@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * main - print
+ * main - texto
  *
- * return text
+ * Return: text in puts
  */
 int main(void)
 {
