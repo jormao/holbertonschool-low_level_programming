@@ -1,8 +1,8 @@
-#include<stdio>
+#include <stdio.h>
 /*
- * print whitout printf
- * only use puts
- * return 0
+ * main - print
+ *
+ * return text
  */
 int main(void)
 {
