@@ -15,9 +15,9 @@ int main(void)
 	int d = 50;
 	int e = 50;
 	/*solo se puede usar 6 putchar*/
-	for (; j < 56; j++)
+	for (; j <= 55; j++)
 	{
-		for (; i <= 57; i++)
+		for (; i <= 56; i++)
 		{
 			for (; k <= 57; k++)
 			{
@@ -34,6 +34,7 @@ int main(void)
 		}
 		e++;
 		k = e;
+		d = e;
 		c++;
 		i = c;
 	}
