@@ -18,7 +18,7 @@ int main(void)
 				{
 					putchar(j);
 					putchar(i);
-					putchar(a);
+					putchar(b);
 					putchar(k);
 					putchar(l);
 					if ((j == 57) && (i == 56) && (k == 57) && (l == 57))
