@@ -20,6 +20,7 @@ void print_times_table(int n)
 				m = j * k;
 				u = m % 10;
 				c = (m / 100);
+				c = c % 10;
 				d = ((m - u) / 10);
 				if (m > 100)
 					d = (m - c * 100) / 10;
