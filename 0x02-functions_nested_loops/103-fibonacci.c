@@ -6,7 +6,7 @@
 */
 int main(void)
 {
-/*this function prints prints the first 50 Fibonacci numbers.*/
+/*this function prints prints the first 50 even Fibonacci numbers.*/
 
 	int j;
 	long int fi1, fi2, fi3, suma;
@@ -17,7 +17,7 @@ int main(void)
 	for (j = 1; j < 50; j++)
 	{
 		fi3 = fi1 + fi2;
-		if (fi3 <= 4000000)
+		if ((fi3 <= 4000000) && (fi3 % 2 == 0))
 			suma = suma + fi3;
 		fi2 = fi1;
 		fi1 = fi3;
