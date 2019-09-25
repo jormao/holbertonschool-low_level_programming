@@ -1,10 +1,11 @@
+#include "holberton"
 #include <stdio.h>
 /**
  * main - prints the sum of all the multiples of 3 or 5 below 1024
  *
  * Return: 0
 */
-void main(void)
+int main(void)
 {
 /*this function prints the sum multiples 3 and 5 below 1024.*/
 
@@ -17,5 +18,5 @@ void main(void)
 		    suma = suma + i;
 	}
 	printf("%d\n", suma);
-
+	return (0);
 }
