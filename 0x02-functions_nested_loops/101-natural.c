@@ -1,12 +1,12 @@
-#include <studio.h>
+#include <stdio.h>
 /**
- * main - prints the n times table, starting with 0.
+ * main - prints the sum of all the multiples of 3 or 5 below 1024
  *
  * Return: 0
 */
-void main(void)
+int main(void)
 {
-/*this function prints the n times table, starting with 0.*/
+/*this function prints the sum multiples 3 and 5 below 1024.*/
 
 	int i, j, suma;
 
