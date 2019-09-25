@@ -13,6 +13,7 @@ int main(void)
 
 	fi1 = 1;
 	fi2 = 0;
+	suma = 0;
 	for (j = 1; j < 50; j++)
 	{
 		fi3 = fi1 + fi2;
