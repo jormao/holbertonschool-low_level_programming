@@ -4,7 +4,7 @@
  *
  * Return: 0
 */
-int main(void)
+void main(void)
 {
 /*this function prints the sum multiples 3 and 5 below 1024.*/
 
@@ -13,11 +13,9 @@ int main(void)
 	suma = 0;
 	for (i = 1; i < 1024; i++)
 	{
-		if ((3 * i) < 1024)
-			suma = suma + (3 * i);
-		if ((5 * i) < 1024 && ((5 * i) % 3 != 0))
-			suma = suma + (5 * i);
+		if ((i % 3 == 0) || (i % 5 == 0))
+		    suma = suma + i;
 	}
 	printf("%d\n", suma);
-	return (0);
+
 }
