@@ -15,7 +15,7 @@ void more_numbers(void)
 	{
 		for (i = 48; i <= 57; i++)
 		{
-			if (j >= 15)
+			if (j >= 14)
 				break;
 			if (j >= 10)
 				_putchar('1');
