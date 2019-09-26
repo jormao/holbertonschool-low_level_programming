@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <inttypes.h>
-#define P10_UINT64 10000000000000000000ULL   /* 19 zeroes */
 /**
  * main - prints the first 98 Fibonacci numbers
  *
@@ -12,7 +11,7 @@ int main(void)
 
 	int j, first_num;
 	__int128 fi1 = 1, fi2 = 0, fi3;
-	uint64_t last_num;
+	uint64_t last_num, P10_UINT64 = 10000000000000000000ULL;
 
 	for (j = 1; j < 98; j++)
 	{
@@ -22,12 +21,12 @@ int main(void)
 			first_num  = fi3 / P10_UINT64;
 			last_num  = fi3 % P10_UINT64;
 			printf("%d", first_num);
-			printf("%." PRIu64 "\n", last_num);
+			printf("%." PRIu64 ", ", last_num);
 		}
 		else
 		{
 			last_num = fi3;
-			printf("%" PRIu64 "\n", last_num);
+			printf("%" PRIu64 ", ", last_num);
 		}
 		fi2 = fi1;
 		fi1 = fi3;
