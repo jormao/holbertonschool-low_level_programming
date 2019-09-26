@@ -9,13 +9,13 @@
 
 int main(void)
 {
-	uint64_t a, c, b, i;
+	long a, c, b, i;
 
 	i = 2;
 	/*finds and prints the largest prime factor */
 	a = 612852475143;
 	c = 1;
-	while (i < a)
+	while (i <= a)
 	{
 		if (a % i == 0)
 		{
@@ -27,6 +27,6 @@ int main(void)
 		}
 		i++;
 	}
-	printf("%." PRIu64 "\n", c);
+	printf("%ld\n", c);
 	return (0);
 }
