@@ -7,9 +7,7 @@
 void print_times_table(int n)
 {
 /*this function prints the n times table, starting with 0.*/
-
-	int k, j, c, d;
-	int u, m;
+	int k, j, c, d, u, m;
 
 	if (n >= 0 && n <= 15)
 	{
@@ -19,10 +17,9 @@ void print_times_table(int n)
 			{
 				m = j * k;
 				u = m % 10;
-				c = (m / 100);
-				c = c % 10;
+				c = ((m / 100) % 10);
 				d = ((m - u) / 10);
-				if (m > 100)
+				if (m >= 100)
 					d = (m - c * 100) / 10;
 				if (j != 0 && m < 10)
 				{
