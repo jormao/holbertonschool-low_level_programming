@@ -13,15 +13,12 @@ int main(void)
 
 	/*finds and prints the largest prime factor */
 	a = 612852475143;
-	while (c != 0)
+	for (i = 2; i <= a; i++)
 	{
-		for (i = 2; i <= a; i++)
-		{
-			c = a % i;
-			d = i;
-			if (c == 0)
-				break;
-		}
+		c = a % i;
+		d = i;
+		if (c == 0)
+			i = a + 1;
 	}
 	e = a / d;
 	if (d > e)
