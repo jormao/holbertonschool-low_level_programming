@@ -1,0 +1,35 @@
+#include "holberton.h"
+/**
+ * print_number - prints an integer only with putchar
+ *@n: number to print
+ *
+ * Return: 0 always
+ */
+
+void print_number(int n)
+{
+	int dm, um, c, d, u;
+
+	/*prints an integer only with putchar */
+
+	if (n < 0)
+	{
+		_putchar('-');
+		n = n * -1;
+	}
+	dm = n / 10000;
+	um = n / 1000;
+	c = n / 100;
+	d = n / 10;
+	u = n % 10;
+
+	if (dm > 0)
+		_putchar(dm + '0');
+	if (dm > 0 || um > 0)
+		_putchar(um + '0');
+	if (dm > 0 || um > 0 || c > 0)
+		_putchar(c + '0');
+	if (dm > 0 || um > 0 || c > 0 || d > 0)
+		_putchar(d + '0');
+	_putchar(u + '0');
+}
