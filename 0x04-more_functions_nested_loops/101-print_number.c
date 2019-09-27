@@ -24,13 +24,15 @@ void print_number(int n)
 	d = (n - (cm * 100000) - (dm * 10000) - (um * 1000) - (c * 100)) / 10;
 	u = n % 10;
 
-	if (dm > 0)
+	if (cm > 0)
+		_putchar('0' + cm);
+	if (cm > 0 || dm > 0)
 		_putchar('0' + dm);
-	if (dm > 0 || um > 0)
+	if (cm > 0 || dm > 0 || um > 0)
 		_putchar('0' + um);
-	if (dm > 0 || um > 0 || c > 0)
+	if (cm > 0 || dm > 0 || um > 0 || c > 0)
 		_putchar(c + '0');
-	if (dm > 0 || um > 0 || c > 0 || d > 0)
+	if (cm > 0 || dm > 0 || um > 0 || c > 0 || d > 0)
 		_putchar(d + '0');
 	_putchar(u + '0');
 }
