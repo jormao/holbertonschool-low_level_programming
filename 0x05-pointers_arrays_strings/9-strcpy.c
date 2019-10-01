@@ -1,9 +1,10 @@
 #include "holberton.h"
 /**
- * *_strcpy(char *dest, char *src) - copies the string pointed to by src
+ * _strcpy - copies the string pointed to by src
  *@dest: first value to check
- *@scr: Second value to check
+ *@src: Second value to check
  *
+ * Return: dest
  */
 char *_strcpy(char *dest, char *src)
 {
