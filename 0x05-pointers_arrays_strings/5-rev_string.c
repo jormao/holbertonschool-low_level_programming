@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
  * rev_string - function that prints a string in reverse
  *@s: first value to check
