@@ -13,7 +13,7 @@ void print_array(int *a, int n)
 
 	for (i = 0; i <= (n - 2);  i++)
 	{
-		printf("%d, ", a[i]);
+		printf("%i, ", a[i]);
 	}
-	printf("%d\n", a[j]);
+	printf("%i\n", a[j]);
 }
