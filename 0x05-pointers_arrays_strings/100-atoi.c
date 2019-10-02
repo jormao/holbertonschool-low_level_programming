@@ -3,23 +3,28 @@
  * _atoi - copies the string pointed to by src
  *@s
  *
- * Return: convert
+ * Return: result
  */
 int _atoi(char *s)
 {
-	int result;
+	int result = 0, i, j, a = 0, negat = 1;
 
 	while (s[i] != '\0')
-	while (((*s) == '-') || ((*s) == '+'))
 	{
-		if (*s == '-')
-			negat = negat * -1;
-		s++;
+		i++;
 	}
-	while ((*s >= '0') && (*s <= '9'))
+	for (j = 0; j < i; j++)
 	{
-		result = (result * 10) + ((*s) - '0');
-		s++;
+		if (s[j] == '-')
+			negat = negat * -1;
+		while ((s[j] >= '0') && (s[j] <= '9'))
+		{
+			result = (result * 10) + (s[j] - '0');
+			j++;
+			a = 1;
+		}
+		if (a == 1)
+			j = i;
 	}
 	result = result * negat;
 	return (result);
