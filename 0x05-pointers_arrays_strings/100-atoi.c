@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
  * _atoi - copies the string pointed to by src
- *@s
+ *@s: first value to check
  *
  * Return: result
  */
