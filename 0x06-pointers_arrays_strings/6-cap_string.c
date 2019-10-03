@@ -22,6 +22,8 @@ char *cap_string(char *p)
 			{
 				p[i + 1] -= 32;
 			}
+			if (p[i] == '\t')
+				p[i] = ' ';
 		}
 		i++;
 	}
