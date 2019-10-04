@@ -7,20 +7,18 @@
  */
 char *leet(char *p)
 {
-	int i = 0;
+	int i = 0, j;
+	char a[] = {"a4A4e3E3o0O0l1L1t7T7"};
 
 	while (p[i] != '\0')
 	{
-		if (p[i] == 65 || p[i] == 97)
-			p[i] = 52;
-		if (p[i] == 69 || p[i] == 101)
-			p[i] = 51;
-		if (p[i] == 79 || p[i] == 111)
-			p[i] = 48;
-		if (p[i] == 84 || p[i] == 116)
-			p[i] = 55;
-		if (p[i] == 76 || p[i] == 108)
-			p[i] = 49;
+		for (j = 0; j <= 19; j++)
+		{
+			if (((p[i] >= 65 && p[i] <= 90) ||
+			    (p[i] >= 97 && p[i] <= 122)) &&
+			    (p[i] == a[j]))
+				p[i] = a[j + 1];
+		}
 		i++;
 	}
 	return (p);
