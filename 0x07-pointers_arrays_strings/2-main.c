@@ -8,14 +8,13 @@
  */
 int main(void)
 {
-    char *s = "\0";
+    char *s = "hello";
     char *f;
 
-    f = _strchr(s, '-');
-
-    if (f != NULL)
-    {
-        printf("%s\n", f);
-    }
-    return (0);
+    	f = _strchr(s, 'l');
+	if (f != NULL)
+    	{
+        	printf("%s\n", f);
+    	}
+    	return (0);
 }
