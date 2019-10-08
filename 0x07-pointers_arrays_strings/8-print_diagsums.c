@@ -1,9 +1,9 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * print_chessboard - function that prints the chessboard.
+ * print_diagsums - function that prints the sum of the two diagonals
  *@a: first value -char
- *
+ *@size: second value -int
  */
 void print_diagsums(int *a, int size)
 {
