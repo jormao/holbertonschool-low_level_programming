@@ -15,7 +15,7 @@ int is_prime_number(int n)
 		return (0);
 	if (n < 0)
 		return (0);
-	return (calculo_primo (n, a));
+	return (calculo_primo(n, a));
 }
 
 /**
@@ -28,7 +28,7 @@ int is_prime_number(int n)
 int calculo_primo(int num_, int inf)
 {
 	if (num_ / 2 < inf)
-                return (1);
+		return (1);
 	if (num_ % inf == 0)
 		return (0);
 	return (calculo_primo(num_, inf + 1));
