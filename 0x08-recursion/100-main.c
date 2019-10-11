@@ -20,7 +20,7 @@ int main(void)
     printf("%d\n", r);
     r = wildcmp("main.c", "ma********************************c");
     printf("%d\n", r);
-    r = wildcmp("main.c", "main");
+    r = wildcmp("main.c", "*");
     printf("%d\n", r);
     r = wildcmp("main.c", "***");
     printf("%d\n", r);
