@@ -71,9 +71,8 @@ int identical_asterisk(char *s6, char *s7, int cont_3, int cont_4)
 		cont_4++;
 	else if ((s6[cont_3] != s7[cont_4]) && (s7[cont_4 - 1] != '*'))
 		return (0);
-	if ((s6[cont_3] == s7[cont_4]) && (s7[cont_4 - 1] == '*')
-	    && !(s7[cont_4] == '\0'))
-		cont_4++;
+	if (s7[cont_4] == '*' && cont_3 != 0)
+		cont_3--;
 	if ((s6[cont_3] == s7[cont_4]) && (s7[cont_4] == '\0'))
 		return (1);
 	return (identical_asterisk(s6, s7, cont_3 + 1, cont_4));
