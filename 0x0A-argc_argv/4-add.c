@@ -12,20 +12,24 @@
 int main(int argc, char *argv[])
 {
 	int i, suma = 0, res = 0;
-	char c[] = "Error";
+	char c[] = "Error", *find_letter;
 
 	if (argc > 1)
 	{
 		for (i = 1; i < argc; i++)
 		{
-			res = atoi(argv[i]);
-			if (res == 0 && *argv[i] != '0')
+			find_letter = argv[i];
+			while (*find_letter != 0)
 			{
-				printf("%s\n", c);
-				return (1);
+				if (*find_letter < 47 || *find_letter > 57)
+				{
+					printf("%s\n", c);
+					return (1);
+				}
+				find_letter++;
 			}
-			if (res > 0)
-				suma += res;
+			res = atoi(argv[i]);
+			suma += res;
 		}
 		printf("%d\n", suma);
 	}
