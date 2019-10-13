@@ -24,7 +24,8 @@ int main(int argc, char *argv[])
 				printf("%s\n", c);
 				return (1);
 			}
-			suma += res;
+			if (res > 0)
+				suma += res;
 		}
 		printf("%d\n", suma);
 	}
