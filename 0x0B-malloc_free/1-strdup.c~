@@ -2,25 +2,28 @@
 #include "holberton.h"
 
 /**
- * create_array - create an array of chars
- * @size: number of elements
- * @c: size of one unit
+ * _strup - create an array of chars
+ * @str: char
  *
  * Return: char
  */
-char *create_array(unsigned int size, char c)
+char *_strdup(char *str)
 {
 	char *res;
-	unsigned int i;
+	int i = 0, j;
 
-	if (size == 0)
+	while (str[i])
+	{
+		i++;
+	}
+	if (str == NULL)
 		return (NULL);
-	res = malloc(size * sizeof(char));
+	res = malloc(i * sizeof(char));
 	if (res == NULL)
 		return (NULL);
-	for (i = 0; i < size; i++)
+	for (j = 0; j < i; j++)
 	{
-		res[i] = c;
+		res[j] = str[j];
 	}
 	return (res);
 }
