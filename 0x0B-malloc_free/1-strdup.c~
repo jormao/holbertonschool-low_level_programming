@@ -2,7 +2,7 @@
 #include "holberton.h"
 
 /**
- * _strup - create an array of chars
+ * _strdup - create an array of chars
  * @str: char
  *
  * Return: char
@@ -21,7 +21,7 @@ char *_strdup(char *str)
 	res = malloc(i * sizeof(char));
 	if (res == NULL)
 		return (NULL);
-	for (j = 0; j < i; j++)
+	for (j = 0; j <= i; j++)
 	{
 		res[j] = str[j];
 	}
