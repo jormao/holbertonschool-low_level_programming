@@ -22,7 +22,7 @@ char *argstostr(int ac, char **av)
 		while (*new)
 		{
 			cont++;
-			i++;
+			new++;
 		}
 		cont++;
 		i++;
