@@ -12,11 +12,11 @@
 int *array_range(int min, int max)
 {
 	int *point;
-	int positions = 0, count = 0;
+	int positions, count = 0;
 
 	if (min > max)
 		return (NULL);
-	positions = max - min + 1;
+	positions = (max - min) + 1;
 	point = malloc(positions);
 	if (point == NULL)
 		return (NULL);
