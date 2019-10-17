@@ -6,6 +6,7 @@
  * @ac: pointer
  * @av: altura
  *
+ * REturn: result
  */
 
 char *argstostr(int ac, char **av)
@@ -18,7 +19,7 @@ char *argstostr(int ac, char **av)
 	while (i < ac)
 	{
 		new = av[i];
-		while (av[i])
+		while (*new)
 		{
 			cont++;
 			i++;
@@ -30,7 +31,7 @@ char *argstostr(int ac, char **av)
 	for (i = 0; i < ac; i++)
 	{
 		new = av[i];
-		for (j =0; *new != '\0'; j++)
+		for (j = 0; *new != '\0'; j++)
 		{
 			result[j] = *new;
 			new++;
