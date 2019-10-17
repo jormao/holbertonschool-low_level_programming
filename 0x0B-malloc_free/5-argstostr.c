@@ -2,7 +2,7 @@
 #include "holberton.h"
 
 /**
- * argstostr - function that frees a 2 dimensional grid previously created
+ * argstostr - function concatenates all the arguments of your program.
  * @ac: pointer
  * @av: altura
  *
@@ -10,11 +10,34 @@
 
 char *argstostr(int ac, char **av)
 {
-	int cont;
+	int i = 0, j = 0, cont;
+	char *result, *new;
 
-	for (cont = 0; cont < height; cont++)
+	if (ac == 0 || av == NULL)
+		return (NULL);
+	while (i < ac)
 	{
-		free(grid[cont]);
+		new = av[i];
+		while (av[i])
+		{
+			cont++;
+			i++;
+		}
+		cont++;
+		i++;
 	}
-	free(grid);
+	result = malloc (cont + 1);
+	for (i = 0; i < ac; i++)
+	{
+		new = av[i];
+		for (j =0; *new != '\0'; j++)
+		{
+			result[j] = *new;
+			new++;
+		}
+		result[j] = '\n';
+		j++;
+	}
+	result[cont + 1] = '\0';
+	return (result);
 }
