@@ -27,7 +27,8 @@ char *argstostr(int ac, char **av)
 		cont++;
 		i++;
 	}
-	result = malloc (cont + 1);
+	result = malloc(cont + 1);
+	i = 0;
 	while (i < ac)
 	{
 		new = av[i];
