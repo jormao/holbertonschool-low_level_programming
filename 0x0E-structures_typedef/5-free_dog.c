@@ -7,12 +7,12 @@
  *
  */
 
-void free_dog(dog_t *d);
+void free_dog(dog_t *d)
 {
 	if (d != NULL)
 	{
-		free(p->name);
-		free(p->owner);
-		free(p);
+		free(d->name);
+		free(d->owner);
+		free(d);
 	}
 }
