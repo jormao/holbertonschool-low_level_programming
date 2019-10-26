@@ -3,7 +3,7 @@
 
 /**
  * print_char - function that prints the char type
- * @types_format: arguments from va_list
+ * @arguments: arguments from va_list
  *
  */
 
@@ -14,7 +14,7 @@ void print_char(va_list arguments)
 
 /**
  * print_int - function that prints the integer type
- * @types_format: arguments from va_list
+ * @arguments: arguments from va_list
  *
  */
 
@@ -25,7 +25,7 @@ void print_int(va_list arguments)
 
 /**
  * print_float - function that prints the float type
- * @types_format: arguments from va_list
+ * @arguments: arguments from va_list
  *
  */
 
@@ -36,7 +36,7 @@ void print_float(va_list arguments)
 
 /**
  * print_string - function that prints the string type
- * @types_format: arguments from va_list
+ * @arguments: arguments from va_list
  *
  */
 
@@ -56,7 +56,6 @@ void print_string(va_list arguments)
 /**
  * print_all - function that prints all type the arguments
  * @format: first value
- * @char: second value
  *
  */
 
