@@ -72,7 +72,7 @@ void print_all(const char * const format, ...)
 	int i = 0, j = 0, a = 0;
 
 	va_start(arguments, format);
-	while (format[j] != '\0')
+	while (format && format[j])
 	{
 		printf(a == 1 ? ", " : "");
 		a = 0;
