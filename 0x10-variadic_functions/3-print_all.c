@@ -59,7 +59,7 @@ void print_all(const char * const format, ...)
 		{"c", print_char},
 		{"i", print_int},
 		{"f", print_float},
-		{"s", print_char},
+		{"s", print_string},
 		{NULL, NULL}
 	};
 	int i = 0, j = 0;
@@ -67,7 +67,7 @@ void print_all(const char * const format, ...)
 	va_start(arguments, format);
 	while (format[j] != '\0')
 	{
-		while (i < 4)
+		while (types[i].type_p)
 		{
 			if (*(types[i].type_p) == format[j])
 				types[i].function(arguments);
