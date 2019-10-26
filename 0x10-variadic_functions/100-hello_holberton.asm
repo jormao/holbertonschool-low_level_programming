@@ -5,10 +5,10 @@ section .data
 section .text
 
 global main
-main:
+_main:
     mov rax, 1
     mov rdi, 1
-    mov rsi, message
+    lea rsi, message
     mov rdx, 17
     syscall
 

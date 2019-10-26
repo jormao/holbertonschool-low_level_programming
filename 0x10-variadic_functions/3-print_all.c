@@ -42,7 +42,15 @@ void print_float(va_list arguments)
 
 void print_string(va_list arguments)
 {
-	printf("%s", va_arg(arguments, char *));
+	char *p;
+
+	p = (va_arg(arguments, char *));
+	if (p == NULL)
+	{
+		printf("(nil)");
+		return;
+	}
+	printf("%s", p);
 }
 
 /**
@@ -62,15 +70,20 @@ void print_all(const char * const format, ...)
 		{"s", print_string},
 		{NULL, NULL}
 	};
-	int i = 0, j = 0;
+	int i = 0, j = 0, a = 0;
 
 	va_start(arguments, format);
 	while (format[j] != '\0')
 	{
+		printf(a == 1 ? ", " : "");
+		a = 0;
 		while (types[i].type_p)
 		{
 			if (*(types[i].type_p) == format[j])
-				types[i].function(arguments);
+			{
+			types[i].function(arguments);
+			a = 1;
+			}
 			i++;
 		}
 		i = 0;

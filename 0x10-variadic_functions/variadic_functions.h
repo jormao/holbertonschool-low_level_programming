@@ -20,5 +20,4 @@ void print_char(va_list arguments);
 void print_int(va_list arguments);
 void print_float(va_list arguments);
 void print_string(va_list arguments);
-void print_null(va_list arguments);
 #endif /* _VARIADIC_FUNCTIONS */
