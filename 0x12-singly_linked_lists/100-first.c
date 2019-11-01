@@ -2,12 +2,12 @@
 #include "lists.h"
 
 /**
- * myStartupFun - print before main
+ * premain - print before main
  *
  */
 
-void myStartupFun(void)
+void __attribute__((constructor)) premain()
 {
 	printf("You're beat! and yet, you must allow,\n");
-	print("I bore my house upon my back!\n");
+	printf("I bore my house upon my back!\n");
 }
