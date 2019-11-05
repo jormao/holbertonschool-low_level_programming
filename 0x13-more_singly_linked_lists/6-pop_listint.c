@@ -14,6 +14,8 @@ int pop_listint(listint_t **head)
 	int data_ret = 0;
 	listint_t *tmp = *head;
 
+	if (tmp == NULL)
+		return (0);
 	data_ret = tmp->n;
 	*head = tmp->next;
 	if (tmp != NULL)
@@ -21,5 +23,5 @@ int pop_listint(listint_t **head)
 		free(tmp);
 		return (data_ret);
 	}
-	return (0);
+	return (data_ret);
 }
