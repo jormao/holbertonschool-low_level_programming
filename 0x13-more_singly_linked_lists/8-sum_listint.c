@@ -14,6 +14,8 @@ int sum_listint(listint_t *head)
 	int suma = 0;
 	listint_t *tmp = head;
 
+	if (head == NULL)
+		return (0);
 	while (tmp->next != NULL)
 	{
 		suma += tmp->n;
