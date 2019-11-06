@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "lists.h"
 
 /**
@@ -14,8 +15,6 @@ size_t print_listint_safe(const listint_t *head)
 	listint_t *aux = (void *)head, *test = 0;
 	int flag = 0;
 
-	if (aux == NULL)
-		return (98);
 	while (aux != NULL)
 	{
 		if (flag == 0)
@@ -28,7 +27,8 @@ size_t print_listint_safe(const listint_t *head)
 			if (test <= aux)
 			{
 				printf("-> [%p] %d\n", (void *)aux, aux->n);
-				return (98);
+				count += 1;
+				return (count);
 			}
 			printf("[%p] %d\n", (void *)aux, aux->n);
 		}
