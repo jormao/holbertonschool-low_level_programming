@@ -27,7 +27,6 @@ size_t print_listint_safe(const listint_t *head)
 			if (test <= aux)
 			{
 				printf("-> [%p] %d\n", (void *)aux, aux->n);
-				count += 1;
 				return (count);
 			}
 			printf("[%p] %d\n", (void *)aux, aux->n);
