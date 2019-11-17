@@ -15,28 +15,20 @@
 
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int fd = 0, fl = 0, fdw = 0, count = 0;
+	int fd = 0, fdw = 0, count = 0;
 
 	if (filename == NULL)
 		return (-1);
-	printf("aca\n");
-	fd = open(filename, O_RDWR);
+	fd = open(filename, O_RDWR | O_APPEND);
 	if (fd == -1)
 		return (-1);
-	printf("pasaopen\n");
-	fl = lseek(fd, 0, SEEK_END);
-	if (fl == -1)
-		return (-1);
-	printf("pasa poner al final\n");
 	while (text_content[count] != '\0')
 	{
 		count++;
-		printf("Estoy en el bucle\n");
 	}
 	fdw = write(fd, text_content, count);
 	if (fdw == -1)
 		return (-1);
-	printf("pase la escritura\n");
 	close(fd);
 	return (1);
 }
