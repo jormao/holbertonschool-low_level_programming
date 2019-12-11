@@ -5,7 +5,7 @@
 /**
  * binary_to_uint - convert from binary to unsigned int
  * @b: binary
- * 
+ *
  * Return: unsigned int
  */
 
@@ -20,10 +20,10 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if ((b[i] - '0') != 0 && (b[i] - '0') != 1)
 			return (0);
-		count ++;
+		count++;
 		i++;
 	}
-	for (i = count - 1; i >= 0; i --)
+	for (i = count - 1; i >= 0; i--)
 	{
 		if (b[i] == '1')
 			decimal += mult;
