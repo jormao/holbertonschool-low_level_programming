@@ -4,7 +4,7 @@
 /**
  * print_dlistint - prints all elements of a dlistint list
  * @h: head of the dlistint
- * 
+ *
  * Return: the number of nodes
  */
 
