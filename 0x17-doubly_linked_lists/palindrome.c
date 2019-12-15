@@ -31,29 +31,30 @@ void rev_string(char *s)
 
 int main (void)
 {
-	int c = 100, b = 100, a = 100, result = 0, palind = 0;
+	int c = 100, b = 100, result = 0, palind = 0;
+	int first = 0, second = 0;
 	char buffer[10], *str_result, inv_result[10];
 
 	for (; c < 1000; c++)
 	{
 		for (; b < 1000; b++)
 		{
-			for (; a < 1000; a++)
+			result = c * b;
+			str_result = itoa(result, buffer, 10);
+			strcpy(inv_result, str_result);
+			rev_string(inv_result);
+			if (!(strcmp(str_result, inv_result)))
 			{
-				result = c * b * a;
-				str_result = itoa(result, buffer, 10);
-				strcpy(inv_result, str_result);
-				rev_string(inv_result);
-				if (!(strcmp(str_result, inv_result)))
+				if (result > palind)
 				{
-					if (result > palind)
-						palind = result;
+					palind = result;
+					first = c;
+					second = b;
 				}	
 			}
-			a = 100;
-		}
+		}	
 		b= 100;
 	}
-	printf("%d\n", palind);
+	printf("%d = %d x %d\n", palind, first, second);
 	return (0);
 }
