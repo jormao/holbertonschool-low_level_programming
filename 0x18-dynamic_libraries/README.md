@@ -50,7 +50,8 @@ At the end of this project, you are expected to be able to explain to anyone, wi
     A README.md file, at the root of the folder of the project, describing what each script is doing
     All your files must be executable
 
-|Tasks-------------------|Description-------------------------------------------------------------------------|
-|libholberton.so         |Create the dynamic library libholberton.so containing all the functions listed      |
-|1-create_dynamic_lib.sh |Create a script that creates a dynamic library called liball.sofrom all the .c files|
-|100-operations.so       |Create a dynamic library that contains C functions that can be called from Python   |
+| Tasks | Description |
+|------------------- | --------------------|
+|libholberton.so | Create the dynamic library libholberton.so containing all the functions listed |
+|1-create_dynamic_lib.sh | Create a script that creates a dynamic library called liball.sofrom all the .c files|
+|100-operations.so | Create a dynamic library that contains C functions that can be called from Python |
