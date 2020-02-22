@@ -3,7 +3,6 @@ CFLAGS = -Wall -Werror -Wextra -pedantic
 SRC =  main.c holberton.c
 OBJ = $(SRC:.c=.o)
 NAME = holberton
-RM = rm -f
 
 .PHONY:= all clean oclean fclean re
 
