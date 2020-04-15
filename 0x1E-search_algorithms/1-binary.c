@@ -23,15 +23,15 @@ int binary_search(int *array, size_t size, int value)
 		printf("Searching in array: ");
 		for (i = inicio; i <= end; ++i)
 		{
-			printf("%d, ", i);
+			printf("%d, ", array[i]);
 		}
-		printf("%d\n", end);
+		printf("%d\n", array[end]);
 		med = (inicio + end) / 2;
 		if (array[med] < value)
 			inicio = med + 1;
 		else if (array[med] > value)
 			end = med - 1;
-		else 
+		else
 			return (med);
 	}
 	return (-1);
