@@ -21,18 +21,18 @@ int binary_search(int *array, size_t size, int value)
 	while (inicio <= end)
 	{
 		printf("Searching in array: ");
-		for (i = inicio; i < end; ++i)
+		for (i = inicio; i <= end; ++i)
 		{
 			printf("%d, ", i);
 		}
 		printf("%d\n", end);
 		med = (inicio + end) / 2;
-		if (array[med] == value)
-			return (med);
-		else if (array[med] < value)
+		if (array[med] < value)
 			inicio = med + 1;
-		else
+		else if (array[med] > value)
 			end = med - 1;
+		else 
+			return (med);
 	}
 	return (-1);
 }
